@@ -1,0 +1,22 @@
+{% extends "base.html" %} {%block title %}Login{%endblock%} {%block content %}
+<form method="post" action="/login">
+    <h3 align="center">Login page</h3>
+    <!-- using a bootstrap class -->
+    <div class="form-group">
+        <label for="email">Email Adress</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+    </div>
+
+    <br />
+    <input type="submit" value="Login" name="action1" class="btn btn-primary" />
+    <input type="submit" value="Forget Password" name="action2" class="btn btn-primary" />
+
+</form>
+
+
+{% endblock %}

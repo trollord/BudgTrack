@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up / Log In</title>
+    <link href="../static/css/signin.css" rel="stylesheet">
+</head>
+
+<body>
+    
+        
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form method="post" action="/sign-up">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=1209600&osid=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                        class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="https://www.linkedin.com/home" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>Or use your email for registration</span>
+                <input type="text" id="firstName" name="firstName" placeholder="Name" />
+                <input type="email" id="email" name="email" placeholder="Email" />
+                <input type="password" id="password1" name="password1" placeholder="Password" />
+                <input type="text" id="maxspend" name="maxspend" placeholder="Maximum Monthly Spend Limit" />
+                <div id="twob">
+                    <script>
+                        const element = document.getElementById("firstName");
+                        element.value = process(rawText);
+                    </script>
+                    <button type="submit">Sign Up</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form method="post" action="/login">
+                <h1>Sign in</h1>
+                <div class="social-container">
+
+                    <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=1209600&osid=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                        class="social">
+
+                        <i class="fab fa-google-plus-g"></i></a>
+                    <a href="https://www.linkedin.com/home" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>Or use your account</span>
+                <input type="email" id="email" name="email" placeholder="Email" />
+                <input type="password" id="password" name="password" placeholder="Password" />
+                <a href="#">Forgot your password?</a>
+                <button type="submit" value="Login" name="action1">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                    <button class="ghost" id="signIn"><a href="/">Home</a></button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Dear Customer!</h1>
+                    <p>Enter your personal details and start your journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                    <button class="ghost" id="signUp"><a href="/">Home</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="../static/assets/js/signin.js"></script>
+<script src="../static/assets/js/voiceassitant.js"></script>
+<script type="text/javascript" src="../static/index.js"></script>
+<script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"8196e7dfd00cc27e4bed4911a989f1bc","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
+</html>

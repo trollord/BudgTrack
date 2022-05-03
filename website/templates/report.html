@@ -1,0 +1,31 @@
+{% extends "base.html" %} {%block title %}Landing wala page{%endblock%} {%block content%}
+<h1>Reports</h1>
+    
+    <p id="dt" hidden>{{dt}}</p>
+    <body> 
+        <h1>Monthy Expenditure</h1>
+         
+        <div id="piechart"></div>
+         
+        <script type="text/javascript"
+        src="https://www.gstatic.com/charts/loader.js"></script>
+         
+        <script type="text/javascript">
+        dt=document.getElementById("dt").innerHTML;
+        dt=JSON.parse(dt);
+        console.log(dt);      
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+        var data = google.visualization.arrayToDataTable(dt);
+          
+        var options = {'title':'Analysis', 'width':700, 'height':800, is3D:true};
+        var chart =
+        new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+        }
+        </script>     
+            
+    </body>    
+   
+{% endblock %}

@@ -1,0 +1,79 @@
+<html>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Automatic Serial number</th>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <!--leave it blank-->
+            <td>Column 1</td>
+            <td>Column 2</td>
+        </tr>
+        <tr>
+            <td></td>
+            <!--leave it blank-->
+            <td>Column 1</td>
+            <td>Column 2</td>
+        </tr>
+        <tr>
+            <td></td>
+            <!--leave it blank-->
+            <td>Column 1</td>
+            <td>Column 2</td>
+        </tr>
+        <tr>
+            <td></td>
+            <!--leave it blank-->
+            <td>Column 1</td>
+            <td>Column 2</td>
+        </tr>
+        <tr>
+            <td></td>
+            <!--leave it blank-->
+            <td>Column 1</td>
+            <td>Column 2</td>
+        </tr>
+        <tr>
+            <td></td>
+            <!--leave it blank-->
+            <td>Column 1</td>
+            <td>Column 2</td>
+        </tr>
+        <tr>
+            <td></td>
+            <!--leave it blank-->
+            <td>Column 1</td>
+            <td>Column 2</td>
+        </tr>
+        <tr>
+            <td></td>
+            <!--leave it blank-->
+            <td>Column 1</td>
+            <td>Column 2</td>
+        </tr>
+    </tbody>
+</table>
+<style>
+    body {
+        counter-reset: Serial;
+        /* Set the Serial counter to 0 */
+    }
+    
+    table {
+        border-collapse: separate;
+    }
+    
+    tr td:first-child:before {
+        counter-increment: Serial;
+        /* Increment the Serial counter */
+        content: "Serial is: " counter(Serial);
+        /* Display the counter */
+    }
+</style>
+
+</html>
