@@ -1,4 +1,4 @@
-# Cash_Book_MPR
+#BudgTrack
 This is a website/webapp to keep track of your expenses. Its secure, accessible (as its a web portal), and intuitive as it is going to let you know about the stats.
 The technologies used are :
 .Flask,for the backend
